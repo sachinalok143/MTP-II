@@ -1,0 +1,179 @@
+% Chapter Template
+
+\chapter{Result} % Main chapter title
+
+\label{Chapter5} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{Chapter 5. \emph{Result }} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Result}
+Analysis of the features extracted from the acquired EEG signals of both subjects led to the identification of multiple mind wandering episodes on each session.We have used different classifiers to classify the data and compared their accuracy.The result of different classifiers shown in the below tables.
+
+To understand the result we have know some terms.That are -
+
+\begin{equation}
+    Precision = \frac{TP}{FP + TP}
+\end{equation}
+\begin{equation}
+    Accuracy = \frac{TN + TP }{TN+TP+PN+FP}
+\end{equation}
+\begin{equation}
+    Recall = \frac{TP}{ FN + TP}
+\end{equation}
+\begin{equation}
+    f1 score = 2 * \frac{Precision * Recall}{ Precision + Recall }
+\end{equation}
+Here,\\
+FN= False Neagative value \\
+TN= True Negative value \\
+TP= True positive value \\
+FP= False Positive value \\
+
+\subsection{Results of Adaptive boost  :}
+we have used decision tree classifier with maximum depth 10 and n\_estimator is equal to 100.Table \ref{tab:adaboost_res} shows the results.
+The hyperparameter are sat as follows:\\
+maximum depth of decision trees=3,\\
+n\_estimators=200\\
+\begin{table}[ht]
+    \centering
+    \caption{Adaptive Boost Result}
+    % \begin{center}
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ccccc}
+            \hline
+            \hline
+             & Precision & Recall & F1 Score & Support \\ 
+            \hline
+              Alertness   & 0.88 & 0.89 & 0.89 & 114  \\
+              Mind Wandering   & 0.85 & 0.84 & 0.85 & 82 \\
+              accuracy &  &  & 0.87 & 196 \\
+              \hline
+              \hline
+        \end{tabular}
+    }
+    % \end{center}
+    
+    \label{tab:adaboost_res}
+\end{table}
+
+\subsection{Results of Decision tree}
+For the accuracy and other training details see Table \ref{tab:decison_tree_res}.
+\begin{center}
+    \begin{table}[ht]
+    \centering
+    \caption{Results of Decision Tree Testing}
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ccccc}
+       \hline
+       \hline
+         & Precision & Recall & F1 Score & Support \\
+        \hline
+          
+         Alertness      & 0.81   &   0.91     & 0.86     &  114 \\
+         Mind Wandering      & 0.85   &   0.70     & 0.77      &  82 \\
+    accuracy      &        &           & 0.82     &  196 \\
+ 
+          \hline
+          \hline
+    \end{tabular}
+    }
+    \label{tab:decison_tree_res}
+\end{table}
+\end{center}
+
+
+\subsection{Results of Gradient Boosting classifier }
+Table \ref{tab:Gradient_Boosting_classifier_res} shows the data obtained during testing trained Gradient Boosting classifier .
+\begin{table}[ht]
+    \centering
+    \caption{Results of Gradient Boosting classifier }
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ccccc}
+       \hline
+       \hline
+         & Precision & Recall & F1 Score & Support \\
+        \hline
+        
+         Alertness      & 0.88     & 0.85     & 0.87       &114 \\
+         Mind Wandering      & 0.80     & 0.84     & 0.82        &82 \\
+    accuracy      &         &           & 0.85       &196 \\
+          \hline
+          \hline
+    \end{tabular}
+    }
+    \label{tab:Gradient_Boosting_classifier_res}
+\end{table}
+
+\subsection{Results of Random Forest }
+You can see the accuracy,precision and recall of Random Forest Classifier in Table \ref{tab:rf_res}.The highest accuracy measured at n\_estimator=102. 
+\begin{table}[ht]
+    \centering
+    \caption{Results ofRandom Forest classifier }
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ccccc}
+       \hline
+       \hline
+         & Precision & Recall & F1 Score & Support \\
+        \hline
+          Alertness &      0.88     & 0.90  &    0.89      & 114 \\
+         Mind Wandering    &   0.86     & 0.83     & 0.84       & 82 \\
+    accuracy    &           &           & 0.87      & 196 \\
+          \hline
+          \hline
+    \end{tabular}
+    }
+    \label{tab:rf_res}
+\end{table}
+
+\subsection{Results of XgBoost }
+In Table \ref{fig:xg_boost}, we have listed the accuracy, precision,recall and f1-score for mind wandering and alertness state.  
+\begin{table}[ht]
+    \centering
+     \caption{Results of xgBoost classifier }
+     {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ccccc}
+       \hline
+       \hline
+         & Precision & Recall & F1 Score & Support \\
+        \hline
+          Alertness   &    0.88    &  0.88      & 0.88      & 114 \\
+         Mind Wandering      & 0.83 &     0.84      & 0.84       & 82 \\
+    accuracy   &            &            & 0.86      & 196 \\
+          \hline
+          \hline
+    \end{tabular}
+    }
+    \label{tab:xqboost_res}
+\end{table}
+
+\subsection{Results of Support Vector Machine }
+The optimal accuracy we got when parameter sat as below shown:\\
+kernel: rbf,gamma: scale, C:6 \\ 
+and the results are shown in Table \ref{tab:SVM_res}.
+\begin{table}[ht]
+    \centering
+    \caption{Results of SVM classifier}
+    {\renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{ccccc}
+       \hline
+       \hline
+         & Precision & Recall & F1 Score & Support \\
+        \hline
+         Alertness    &   0.83 &    0.93 &     0.88 &       114\\
+         Mind Wandering    &   0.88  &    0.73 &      0.80      &  82 \\
+        accuracy    &          &            &     0.85      & 196 \\
+          \hline
+          \hline
+    \end{tabular}
+    }
+    \label{tab:SVM_res}
+\end{table}
+%-----------------------------------
+%	SUBSECTION 1
+%-----------------------------------
