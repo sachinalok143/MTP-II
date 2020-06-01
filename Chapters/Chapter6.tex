@@ -16,6 +16,9 @@
 Analysis of the features extracted from the acquired EEG signals of both subjects led to the identification of multiple mind wandering episodes on each session.We have used different classifiers to classify the data and compared their accuracy.The result of different classifiers shown in the below tables.
 
 To understand the result we have know some terms.That are -
+\begin{equation}
+    f1 score = 2 * \frac{Precision * Recall}{ Precision + Recall }
+\end{equation}
 
 \begin{equation}
     Precision = \frac{TP}{FP + TP}
@@ -26,14 +29,12 @@ To understand the result we have know some terms.That are -
 \begin{equation}
     Recall = \frac{TP}{ FN + TP}
 \end{equation}
-\begin{equation}
-    f1 score = 2 * \frac{Precision * Recall}{ Precision + Recall }
-\end{equation}
+
 Here,\\
-FN= False Neagative value \\
-TN= True Negative value \\
-TP= True positive value \\
-FP= False Positive value \\
+FN: False Neagative value \\
+TN: True Negative value \\
+TP: True positive value \\
+FP:False Positive value \\
 
 \subsection{Results of Adaptive boost  :}
 we have used decision tree classifier with maximum depth 10 and n\_estimator is equal to 100.Table \ref{tab:adaboost_res} shows the results.
@@ -114,7 +115,7 @@ Table \ref{tab:Gradient_Boosting_classifier_res} shows the data obtained during 
 You can see the accuracy,precision and recall of Random Forest Classifier in Table \ref{tab:rf_res}.The highest accuracy measured at n\_estimator=102. 
 \begin{table}[ht]
     \centering
-    \caption{Results ofRandom Forest classifier }
+    \caption{Results of Random Forest classifier }
     {\renewcommand{\arraystretch}{1.2}
     \begin{tabular}{ccccc}
        \hline
@@ -153,8 +154,10 @@ In Table \ref{fig:xg_boost}, we have listed the accuracy, precision,recall and f
 \end{table}
 
 \subsection{Results of Support Vector Machine }
-The optimal accuracy we got when parameter sat as below shown:\\
-kernel: rbf,gamma: scale, C:6 \\ 
+The optimal accuracy we got when hyper-parameters sat as shown below:\\
+kernel: rbf,\\
+gamma: scale,\\
+C:6 \\ 
 and the results are shown in Table \ref{tab:SVM_res}.
 \begin{table}[ht]
     \centering

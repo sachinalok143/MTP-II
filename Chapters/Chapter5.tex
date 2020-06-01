@@ -240,7 +240,7 @@ Support vector machine (SVM)  uses a classification algorithms for two-class cla
     \caption{SVM for a linearly classifiable input}
     \label{fig:svm}
 \end{figure}
-In Figure \ref{fig:svm}, you can see a SVM classifier for a linearly classifiable data.
+In Figure \ref{fig:svm}, you can see a SVM classifier for a linearly classifiable data \cite{svm}.
 
 Now a days,Support Vector Machine (SVM) classifiers is quite popular in the field of classification,regression analysis and novelty detection  in recent years,  \cite{bishop2006pattern} \cite{xie2008research}.In EEG classifiers, it has been seen that SVM gave very promising results  \cite{lal2004support}. A kernel-based algorithm has been use in Support Vector Machine to give sparse solutions.Support Vector Machine is a computationally efficient method for solving high dimensional  and complex problems, because a  kernel solution required  only for a specific subset of the training data ,not for  the entire training set.  The Support Vector Machine converges to a single minimum and also good in classification of  nonlinear data, and it makes SVM preferable to  neural network or linear  classifiers. A hyper-plane or set of hyper-planes (in a high- or infinite-dimensional space) has been constructed in SVM, which is used for  regression, classification,or other tasks e.g. outliers detection. Intuitively, a hyper-plane is a  good separator of two class.It has the highest length of project to the nearest training-data point of any class.It is also called functional margin.The  margin is inversely proportional to  the generalization error of the classifier  \cite{bishop2006pattern}:
 
@@ -262,7 +262,7 @@ While learning a decision tree,based on a feature value, test we split the sourc
 \end{figure}
 
 The algorithm used to build  DT is called ID3.  J. R. Quinlan developed a top-down, greedy search through the space of possible branches with no backtracking approach has been used in this algorithm . ID3 uses Entropy (equation \ref{entropy} )and Information Gain (equation \ref{gain}) to split a set to subsets,while constructing  a decision tree.
-\paragraph{Entropy} : measure of randomness
+\subsubsection{Entropy} : measure of randomness
 \begin{equation}
     E(S)=\sum_{i=1}^c -p_i log_2 p_i
     \label{entropy}
@@ -271,7 +271,7 @@ Here,\\
 S:class name\\
 c: types of values (2 for binary ) \\
 $p_i$ : count of values of $i^{th}$ type\\
-\paragraph{Gain} : gain in entropy after splitting in to subsets
+\subsubsection{Gain} : gain in entropy after splitting in to subsets
     \begin{equation}
         G(T,X) = E(T) - E(T,X)
         \label{gain}
@@ -299,7 +299,7 @@ Random forest is a bootstrapping algorithm which uses Decision tree classifier.I
 \begin{figure}[ht]
     \centering
     \includegraphics[width=15cm]{Pictures/random_forest_1.png}
-    \caption{Random Forest diagram }
+    \caption{Random Forest diagram \cite{randomforest} }
     \label{fig:random_forest}
 \end{figure}
 
