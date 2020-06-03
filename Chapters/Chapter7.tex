@@ -18,7 +18,7 @@ We have analysed the EEG signals from 64 channels to detect the mind wandering s
     \subfigure[]{\includegraphics[width=0.49\textwidth]{Pictures/Accuracy vs. Classsifiers (1).png}}
     \subfigure[]{\includegraphics[width=0.49\textwidth]{Pictures/Accuracy, F1-Score-MW and F1-Score-Alertness.png}}
     \subfigure[]{\includegraphics[width=0.49\textwidth]{Pictures/Accuracy, Precision-MW and Precision-Alertness.png}}
-    \subfigure[]{\includegraphics[width=0.49\textwidth]{Pictures/chart (1).png}}
+    \subfigure[]{\includegraphics[width=0.49\textwidth]{Pictures/chart.png}}
     
     \subfigure[]{\includegraphics[width=0.49\textwidth]{Pictures/Accuracy, Precision-Alertness, Recall-Alertness and F1-Score-Alertness (1).png}}
     \subfigure[]{\includegraphics[width=0.49\textwidth]{Pictures/Accuracy, Precision-MW, Recall-MW and F1-Score-MW.png}}
@@ -29,4 +29,4 @@ We have analysed the EEG signals from 64 channels to detect the mind wandering s
 \end{figure}
 
 
-The highest accuracy, that we got by analysing EEG-signals from 64 channels using 6 different basic machine learning  classifiers is 87\% which is higher than any research have been done in this area.We have got the highest accuracy on Random Forest classifier.Before applying classifier we extracted MW \& alertness data from continuous channel signals, normalized them,extracted feature set for all 64 channels of size 52 and flattened them by concatenating each channel data.Then we have applied classifiers.By comparing all the results we can safely deduce that by using XgBoost,Random Forest and Ada-Boost ML classifiers to detect MW and alertness state with a 86-87 \% accuracy.
+The highest accuracy, that we got by analysing EEG-signals from 64 channels using 6 different basic machine learning  classifiers is 87\% which is higher than any research have been done in this area.We have got the highest accuracy on Random Forest classifier.Before applying classifier we extracted MW \& alertness data from continuous channel signals, normalized them,extracted feature set for all 64 channels of size 52 and flattened them by concatenating each channel data.Then we have applied classifiers.By comparing all the results we can safely deduce that we can use XgBoost,Random Forest and Ada-Boost ML classifiers to detect MW and alertness state with a 86-87 \% accuracy.

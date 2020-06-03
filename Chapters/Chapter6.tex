@@ -12,7 +12,7 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
-\section{Result}
+% \section{Result}
 Analysis of the features extracted from the acquired EEG signals of both subjects led to the identification of multiple mind wandering episodes on each session.We have used different classifiers to classify the data and compared their accuracy.The result of different classifiers shown in the below tables.
 
 To understand the result we have know some terms.That are -
@@ -36,8 +36,8 @@ TN: True Negative value \\
 TP: True positive value \\
 FP:False Positive value \\
 
-\subsection{Results of Adaptive boost  :}
-we have used decision tree classifier with maximum depth 10 and n\_estimator is equal to 100.Table \ref{tab:adaboost_res} shows the results.
+\section{Results of Adaptive boost  }
+we have used decision tree classifier with maximum depth 3 and n\_estimator is equal to 200.Table \ref{tab:adaboost_res} shows the results.
 The hyperparameter are sat as follows:\\
 maximum depth of decision trees=3,\\
 n\_estimators=200\\
@@ -51,9 +51,9 @@ n\_estimators=200\\
             \hline
              & Precision & Recall & F1 Score & Support \\ 
             \hline
-              Alertness   & 0.88 & 0.89 & 0.89 & 114  \\
-              Mind Wandering   & 0.85 & 0.84 & 0.85 & 82 \\
-              accuracy &  &  & 0.87 & 196 \\
+              Alertness   & 0.88 & 0.87 & 0.88 & 114  \\
+              Mind Wandering   & 0.82 & 0.84 & 0.83 & 82 \\
+              accuracy &  &  & 0.86 & 196 \\
               \hline
               \hline
         \end{tabular}
@@ -63,7 +63,7 @@ n\_estimators=200\\
     \label{tab:adaboost_res}
 \end{table}
 
-\subsection{Results of Decision tree}
+\section{Results of Decision tree}
 For the accuracy and other training details see Table \ref{tab:decison_tree_res}.
 \begin{center}
     \begin{table}[ht]
@@ -89,7 +89,7 @@ For the accuracy and other training details see Table \ref{tab:decison_tree_res}
 \end{center}
 
 
-\subsection{Results of Gradient Boosting classifier }
+\section{Results of Gradient Boosting classifier }
 Table \ref{tab:Gradient_Boosting_classifier_res} shows the data obtained during testing trained Gradient Boosting classifier .
 \begin{table}[ht]
     \centering
@@ -111,7 +111,7 @@ Table \ref{tab:Gradient_Boosting_classifier_res} shows the data obtained during 
     \label{tab:Gradient_Boosting_classifier_res}
 \end{table}
 
-\subsection{Results of Random Forest }
+\section{Results of Random Forest }
 You can see the accuracy,precision and recall of Random Forest Classifier in Table \ref{tab:rf_res}.The highest accuracy measured at n\_estimator=102. 
 \begin{table}[ht]
     \centering
@@ -132,7 +132,7 @@ You can see the accuracy,precision and recall of Random Forest Classifier in Tab
     \label{tab:rf_res}
 \end{table}
 
-\subsection{Results of XgBoost }
+\section{Results of XgBoost }
 In Table \ref{fig:xg_boost}, we have listed the accuracy, precision,recall and f1-score for mind wandering and alertness state.  
 \begin{table}[ht]
     \centering
@@ -153,7 +153,7 @@ In Table \ref{fig:xg_boost}, we have listed the accuracy, precision,recall and f
     \label{tab:xqboost_res}
 \end{table}
 
-\subsection{Results of Support Vector Machine }
+\section{Results of Support Vector Machine }
 The optimal accuracy we got when hyper-parameters sat as shown below:\\
 kernel: rbf,\\
 gamma: scale,\\
@@ -178,5 +178,5 @@ and the results are shown in Table \ref{tab:SVM_res}.
     \label{tab:SVM_res}
 \end{table}
 %-----------------------------------
-%	SUBSECTION 1
+%	section 1
 %-----------------------------------
